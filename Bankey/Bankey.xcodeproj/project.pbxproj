@@ -60,8 +60,8 @@
 		EF7665962C36E4F900C80395 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
-				EFE4B5622D6513ED0034F293 /* Onboarding */,
 				EF7665AC2C36EB1600C80395 /* Files */,
+				EFE4B5622D6513ED0034F293 /* Onboarding */,
 				EF7665AD2C36EB8E00C80395 /* Login */,
 				EF7665972C36E4F900C80395 /* AppDelegate.swift */,
 				EF7665992C36E4F900C80395 /* SceneDelegate.swift */,
