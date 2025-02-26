@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     let loginViewController = LoginViewController()
     let onboardingViewController = OnboardingViewController()
+    let dummyViewController = DummyViewController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -20,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         loginViewController.delegate = self
         onboardingViewController.delegate = self
+        dummyViewController.logouDelegate = self
         
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
@@ -28,17 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
 
-}
-
-extension SceneDelegate: LoginViewControllerDelegate, OnboardingViewControllerDelegate {
-    func didLogin() {
-        setNextViewController(onboardingViewController)
-        
-    }
-    
-    func didFinishOnboarding() {
-        print("Did finish onboarding")
-    }
 }
 
 extension SceneDelegate {
@@ -53,6 +44,27 @@ extension SceneDelegate {
         window.rootViewController = vc
         window.makeKeyAndVisible()
         UIView.transition(with: window, duration: 0.6, options: .transitionCrossDissolve, animations: nil, completion: nil)
+    }
+}
+
+extension SceneDelegate: LoginViewControllerDelegate, OnboardingViewControllerDelegate, LogoutDelegate {
+    func didLogin() {
+        if LocalState.hasOnboarded {
+            setNextViewController(dummyViewController)
+        } else {
+            setNextViewController(onboardingViewController)
+        }
+        
+        
+    }
+    
+    func didFinishOnboarding() {
+        LocalState.hasOnboarded = true
+        setNextViewController(dummyViewController)
+    }
+    
+    func didLogout() {
+        setNextViewController(loginViewController)
     }
 }
 

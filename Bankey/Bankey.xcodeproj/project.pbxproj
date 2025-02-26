@@ -13,6 +13,8 @@
 		EF7665A12C36E4FA00C80395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7665A02C36E4FA00C80395 /* Assets.xcassets */; };
 		EF7665A42C36E4FA00C80395 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EF7665A32C36E4FA00C80395 /* Base */; };
 		EF7665AF2C36EBCE00C80395 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7665AE2C36EBCE00C80395 /* LoginView.swift */; };
+		EF8581622D6F881E00C8E53A /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8581612D6F881E00C8E53A /* DummyViewController.swift */; };
+		EF8581652D6FB5BC00C8E53A /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8581642D6FB5BC00C8E53A /* LocalState.swift */; };
 		EF9FA3D12D6514F6007657FA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA3D02D6514F6007657FA /* OnboardingViewController.swift */; };
 		EF9FA3D32D654718007657FA /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9FA3D22D654718007657FA /* OnboardingContentViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		EF7665A32C36E4FA00C80395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF7665A52C36E4FA00C80395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF7665AE2C36EBCE00C80395 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EF8581612D6F881E00C8E53A /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		EF8581642D6FB5BC00C8E53A /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		EF9FA3D02D6514F6007657FA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		EF9FA3D22D654718007657FA /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +64,7 @@
 		EF7665962C36E4F900C80395 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				EF8581632D6FB5AA00C8E53A /* Utils */,
 				EF7665AC2C36EB1600C80395 /* Files */,
 				EFE4B5622D6513ED0034F293 /* Onboarding */,
 				EF7665AD2C36EB8E00C80395 /* Login */,
@@ -84,8 +89,17 @@
 			children = (
 				EF76659B2C36E4F900C80395 /* LoginViewController.swift */,
 				EF7665AE2C36EBCE00C80395 /* LoginView.swift */,
+				EF8581612D6F881E00C8E53A /* DummyViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		EF8581632D6FB5AA00C8E53A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EF8581642D6FB5BC00C8E53A /* LocalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		EFE4B5622D6513ED0034F293 /* Onboarding */ = {
@@ -167,12 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8581622D6F881E00C8E53A /* DummyViewController.swift in Sources */,
 				EF76659C2C36E4F900C80395 /* LoginViewController.swift in Sources */,
 				EF9FA3D32D654718007657FA /* OnboardingContentViewController.swift in Sources */,
 				EF7665982C36E4F900C80395 /* AppDelegate.swift in Sources */,
 				EF7665AF2C36EBCE00C80395 /* LoginView.swift in Sources */,
 				EF9FA3D12D6514F6007657FA /* OnboardingViewController.swift in Sources */,
 				EF76659A2C36E4F900C80395 /* SceneDelegate.swift in Sources */,
+				EF8581652D6FB5BC00C8E53A /* LocalState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

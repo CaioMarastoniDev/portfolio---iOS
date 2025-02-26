@@ -71,6 +71,7 @@ class OnboardingViewController: UIViewController {
         //CLOSE BUTTOm
         closeButtom.translatesAutoresizingMaskIntoConstraints = false
         closeButtom.setTitle("Close", for: [])
+        closeButtom.setTitleColor(.white, for: [])
         closeButtom.addTarget(self, action: #selector(closeTapped), for: .primaryActionTriggered)
         
     }
@@ -88,7 +89,7 @@ class OnboardingViewController: UIViewController {
         
         //CLOSE BUTTOM
         NSLayoutConstraint.activate([
-            closeButtom.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
+            pageViewController.view.safeAreaLayoutGuide.bottomAnchor.constraint(equalToSystemSpacingBelow: closeButtom.bottomAnchor, multiplier: 0),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: closeButtom.trailingAnchor, multiplier: 2)
         ])
     }
